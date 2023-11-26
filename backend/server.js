@@ -17,6 +17,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send({ message: "Hello World!" });
 });
+
+app.use("/users", require("./routes/UsersRoutes"));
 //add routes here...
 // eg : 
 //     app.use("/Components", require("./routes/ComponentsRoutes"));
