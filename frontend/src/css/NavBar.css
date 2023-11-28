@@ -1,0 +1,65 @@
+/* NavBar.css */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #111111;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 45px;
+  border-radius: 50%;
+}
+
+.logo {
+  margin-top: 50px;
+}
+
+.desktop-links {
+  display: flex;
+  align-items: center;
+}
+
+.Paper {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.desktop-links a {
+  text-decoration: none;
+  transition: color 0.3s;
+  background-color: transparent;
+  color: #fff;
+}
+
+.desktop-links a:hover {
+  color: #ccff02;
+}
+
+.desktop-links a.active {
+  color: #ccff02;
+}
+
+.mobile-menu {
+  width: 200px;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #111111;
+}
+
+.mobilePaper {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.mobilePaper.active {
+  color: #ccff02;
+}
