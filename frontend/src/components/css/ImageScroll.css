@@ -1,49 +1,131 @@
-/* ImageScroll1.css */
+/* Add this CSS to your styles or create a separate CSS file */
 
+/* Style for the wrapper div */
 .wrapper {
-  max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden; /* Hide horizontal scroll */
 }
 
+/* Style for the image container */
 .imageContainer {
   display: flex;
   flex-direction: row;
-  gap: 25px;
-  width: 300vw;
+  gap: 10px; /* Adjust the gap between images */
+  width: 200%; /* Adjest width to accommodate the horizontal loop */
+  height: 30vw;
+  margin-top: 100px;
+  margin-left: -100px;
 }
 
+/* Style for individual images */
 .image {
+  height: 400px; /* Set the height of your images */
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
   background-size: cover;
+  border-radius: 20px;
 }
 
-.imageContainer .image:nth-child(odd) {
-  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Finspirationfeed.com%2Fnature-quotes%2F&psig=AOvVaw02oKedlYpu10RNm6mZAnDo&ust=1701231361727000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIjTjOrq5YIDFQAAAAAdAAAAABAJ");
+/* Set background images for the images */
+.image:nth-child(1) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-0.png"); /* Replace with the actual URL */
 }
 
-.imageContainer .image:nth-child(2) {
-  background-image: url("https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/master/pass/gettyimages-1146431497.jpg");
+.image:nth-child(2) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-1.png"); /* Replace with the actual URL */
 }
 
-.imageContainer .image:nth-child(3) {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg/1200px-Altja_j%C3%B5gi_Lahemaal.jpg");
+.image:nth-child(3) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-2.png"); /* Replace with the actual URL */
 }
 
-.imageContainer .image:nth-child(4) {
-  background-image: url("https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/Zugpsitze_mountain.jpg?crop=0%2C176%2C3008%2C1654&wid=4000&hei=2200&scl=0.752");
+.image:nth-child(4) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-3.png"); /* Replace with the actual URL */
 }
 
-.imageContainer .image:nth-child(5) {
-  background-image: url("https://d19h8kn98xvxar.cloudfront.net/images/_hero/connectwithnature.jpg");
+.image:nth-child(5) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-4.png"); /* Replace with the actual URL */
 }
 
-.imageContainer .image:nth-child(6) {
-  background-image: url("https://www.uwa.edu.au/news/-/media/project/uwa/uwa/newsroom/card-image/2023/value-of-nature-card.jpg");
+.image:nth-child(6) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-5.png"); /* Replace with the actual URL */
 }
 
-.imageContainer .image:nth-child(7) {
-  background-image: url("https://static.sadhguru.org/d/46272/1633199491-1633199490440.jpg");
+.image:nth-child(7) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-6.png"); /* Replace with the actual URL */
 }
 
-.imageContainer .image:nth-child(8) {
-  background-image: url("https://static.sadhguru.org/d/46272/1633199491-1633199490440.jpg");
+.image:nth-child(8) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-7.png"); /* Replace with the actual URL */
+}
+
+.image:nth-child(9) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-8.png"); /* Replace with the actual URL */
+}
+
+@media screen and (max-width: 2560px) {
+  .image {
+    height: 20vw;
+    width: 35vw;
+    background-size: cover;
+  }
+  .imageContainer {
+    height: 25vw;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .image {
+    height: 15vw;
+    width: 25vw;
+    background-size: cover;
+  }
+  .imageContainer {
+    height: 20vw;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .image {
+    height: 17vw;
+    width: 30vw;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .image {
+    height: 34vw;
+    width: 54vw;
+    background-size: cover;
+  }
+  .imageContainer {
+    height: 40vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .image {
+    height: 45vw;
+    width: 64vw;
+    background-size: cover;
+  }
+
+  .imageContainer {
+    height: 50vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .image {
+    height: 50vw;
+    width: 74vw;
+    background-size: cover;
+  }
+
+  .imageContainer {
+    height: 60vw;
+  }
 }

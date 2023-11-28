@@ -21,13 +21,14 @@ const HomePage = () => {
 
   // Use media query with the created theme
   const isSmallDevice = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMediumDevice = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <ThemeProvider theme={theme}>
       <Box
         sx={{
           backgroundColor: "#111111",
-          height: "90vh",
+          height: "100vh",
           display: "flex",
           marginTop: "15vh",
           alignItems: "center",
@@ -38,7 +39,8 @@ const HomePage = () => {
         <Typography
           sx={{
             color: "#ffffff",
-            fontSize: isSmallDevice ? 50 : 65,
+            fontSize: isSmallDevice ? 50 : 75,
+            padding: isMediumDevice ? "0 10px" : "0 0",
             fontFamily: "Syne Mono, monospace",
           }}
         >
@@ -54,12 +56,22 @@ const HomePage = () => {
           This is a subtitle
         </Typography>
         <Link to={"/ourProjects"}>
-        <Button variant="contained" color="ochre" sx={{ marginTop: "2rem", width: "150px", height: "50px", borderRadius: "50px" }}>
-          Explore
-        </Button>
+          <Button
+            variant="contained"
+            color="ochre"
+            sx={{
+              marginTop: "2rem",
+              width: "150px",
+              height: "50px",
+              borderRadius: "50px",
+            }}
+          >
+            Explore
+          </Button>
         </Link>
-
+        {/* The ImageScroll1 component */}
         <ImageScroll1 />
+        
       </Box>
     </ThemeProvider>
   );
