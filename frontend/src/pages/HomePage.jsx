@@ -90,10 +90,12 @@ const HomePage = () => {
             Explore
           </Button>
         </Link>
-        {/* The ImageScroll1 component */}
-        <ImageScroll1 /> 
+        <ImageScroll1 /> {/* The ImageScroll1 component */}
       </Box>
-      <WordsGallery words={words} />
+      <WordsGallery words={words} /> {/* The WordsGalery component */}
+      <Box>
+        
+      </Box>
     </ThemeProvider>
   );
 };
