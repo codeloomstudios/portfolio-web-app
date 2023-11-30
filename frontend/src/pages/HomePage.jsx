@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ImageScroll1 from "../components/ImageScroll1";
+import WordsGallery from "../components/WordsGallery";
 
 const HomePage = () => {
   // Create the theme with the specified color
@@ -22,6 +23,26 @@ const HomePage = () => {
   // Use media query with the created theme
   const isSmallDevice = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumDevice = useMediaQuery(theme.breakpoints.down("md"));
+  const words = [
+    "React",
+    "JavaScript",
+    "Material-UI",
+    "Tags",
+    "Gallery",
+    "React",
+    "JavaScript",
+    "Material-UI",
+    "Tags",
+    "Gallery",
+    "React",
+    "JavaScript",
+    "Material-UI",
+    "Tags",
+    "Gallery",
+    "React",
+    "JavaScript",
+    "Material-UI",
+  ];
 
   return (
     <ThemeProvider theme={theme}>
@@ -55,7 +76,7 @@ const HomePage = () => {
         >
           This is a subtitle
         </Typography>
-        <Link to={"/ourProjects"}>
+        <Link to={"/ourProjects"} style={{marginBottom:"50px"}}>
           <Button
             variant="contained"
             color="ochre"
@@ -70,9 +91,9 @@ const HomePage = () => {
           </Button>
         </Link>
         {/* The ImageScroll1 component */}
-        <ImageScroll1 />
-        
+        <ImageScroll1 /> 
       </Box>
+      <WordsGallery words={words} />
     </ThemeProvider>
   );
 };

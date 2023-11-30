@@ -1,131 +1,93 @@
-/* Add this CSS to your styles or create a separate CSS file */
-
-/* Style for the wrapper div */
-.wrapper {
-  overflow: hidden; /* Hide horizontal scroll */
+.slider {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+  width: 100vw; /* Set slider container width to 100vw */
+  place-items: center;
+  overflow: hidden; /* Add overflow property to hide any overflow caused by scrolling */
 }
 
-/* Style for the image container */
-.imageContainer {
+.slide-track {
   display: flex;
-  flex-direction: row;
-  gap: 10px; /* Adjust the gap between images */
-  width: 200%; /* Adjest width to accommodate the horizontal loop */
-  height: 30vw;
-  margin-top: 100px;
-  margin-left: -100px;
+  width: calc(650px * 18); /* (slide track width = total number of slides (9*2 =18) * individual slide width (250px)) */
+  animation: scroll 70s linear infinite; /* Adjusted animation duration (Speed) */
 }
 
-/* Style for individual images */
-.image {
-  height: 400px; /* Set the height of your images */
-  width: 35vw;
+.slide-track:hover {
+  animation-play-state: paused; /* Pauses the animation on hover */
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-250px * 9)); /* (Moves the slide track leftwards (-250px) by half (18 images / 2 =9) of its width) */
+  }
+}
+
+.slide {
+  width: 650px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: end;
-  background-size: cover;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px; /* To make the image move on the Z-axis (depth), we need to add to its container (.slide) a perspective */
+  color: #fff;
   border-radius: 20px;
 }
 
-/* Set background images for the images */
-.image:nth-child(1) {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-0.png"); /* Replace with the actual URL */
+.slide img {
+  width: 100%;
+  transition: transform 1s;
+  border-radius: 20px;
 }
 
-.image:nth-child(2) {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-1.png"); /* Replace with the actual URL */
+.slide img:hover {
+  transform: scale(1.05) ; /* Unlike translateX and translateY, translateZ alone won't work */
 }
 
-.image:nth-child(3) {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-2.png"); /* Replace with the actual URL */
-}
-
-.image:nth-child(4) {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-3.png"); /* Replace with the actual URL */
-}
-
-.image:nth-child(5) {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-4.png"); /* Replace with the actual URL */
-}
-
-.image:nth-child(6) {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-5.png"); /* Replace with the actual URL */
-}
-
-.image:nth-child(7) {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-6.png"); /* Replace with the actual URL */
-}
-
-.image:nth-child(8) {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-7.png"); /* Replace with the actual URL */
-}
-
-.image:nth-child(9) {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #111),url("../../images/item-8.png"); /* Replace with the actual URL */
-}
-
-@media screen and (max-width: 2560px) {
-  .image {
-    height: 20vw;
-    width: 35vw;
-    background-size: cover;
+@media screen and (max-width: 1366px) {
+  .slider{
+    height: 160vh;
   }
-  .imageContainer {
-    height: 25vw;
+
+  .slide-track {
+      width: calc(550px * 18);
+  }
+
+  .slide{
+    width: 550px;
   }
 }
 
-@media screen and (max-width: 2000px) {
-  .image {
-    height: 15vw;
-    width: 25vw;
-    background-size: cover;
+@media screen and (max-width: 1024px) {
+  .slide-track {
+      width: calc(550px * 18);
   }
-  .imageContainer {
-    height: 20vw;
+
+  .slide{
+    width: 550px;
   }
 }
 
-@media screen and (max-width: 1800px) {
-  .image {
-    height: 17vw;
-    width: 30vw;
-    background-size: cover;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .image {
-    height: 34vw;
-    width: 54vw;
-    background-size: cover;
-  }
-  .imageContainer {
-    height: 40vw;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .image {
-    height: 45vw;
-    width: 64vw;
-    background-size: cover;
+@media screen and (max-width: 775px) {
+  .slide-track {
+      width: calc(380px * 18);
   }
 
-  .imageContainer {
-    height: 50vw;
+  .slide{
+    width: 380px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .image {
-    height: 50vw;
-    width: 74vw;
-    background-size: cover;
+  .slide-track {
+      width: calc(350px * 18);
   }
 
-  .imageContainer {
-    height: 60vw;
+  .slide{
+    width: 350px;
   }
 }
