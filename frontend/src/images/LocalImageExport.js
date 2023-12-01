@@ -1,6 +1,6 @@
-import test1 from './bottom.png';
-import test2 from './side.jpg';
-import test3 from './top.jpg';
+import illustration1 from './illustration1.svg'
+
+const errorIMG = "https://i.ibb.co/0FTQSN9/error-img.png";
 
 
-export { test1, test2, test3 };
+export { illustration1 , errorIMG };

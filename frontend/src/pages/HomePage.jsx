@@ -6,8 +6,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ImageScroll1 from "../components/ImageScroll1";
 import WordsGallery from "../components/WordsGallery";
-import { Image } from "antd";
-import { test1, test2, test3 } from "../images/LocalImageExport";
+import { Image, Col, Row } from "antd";
+import { illustration1, errorIMG } from "../images/LocalImageExport";
 
 const HomePage = () => {
   // Create the theme with the specified color
@@ -25,6 +25,7 @@ const HomePage = () => {
   // Use media query with the created theme
   const isSmallDevice = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumDevice = useMediaQuery(theme.breakpoints.down("md"));
+  const isLargeDevice = useMediaQuery(theme.breakpoints.down("lg"));
   const words = [
     "React",
     "JavaScript",
@@ -95,84 +96,75 @@ const HomePage = () => {
         <ImageScroll1 /> {/* The ImageScroll1 component */}
       </Box>
       <WordsGallery words={words} /> {/* The WordsGalery component */}
-      {/* Section */}
+      {/* Section 01*/}
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
           marginTop: "70px",
+          flexGrow: 1,
         }}
       >
-        <Box sx={{ display: "flex", width: "70vw", alignItems:"center", justifyContent:"center" }}>
-          <Box sx={{ display: "flex" }}>
+        <Row style={{ width: "70vw", alignItems: "center" }}>
+          <Col sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 12 }}>
             {" "}
-            {/* The Image Side */}
-            <Box>
-              <Image
-                width={300}
-                src={test2}
-                preview={false}
-                fallback="https://i.ibb.co/0FTQSN9/error-img.png"
-              />
-            </Box>
-            <Box>
-              <Box>
-                <Image
-                  width={200}
-                  src={test1}
-                  preview={false}
-                  fallback="https://i.ibb.co/0FTQSN9/error-img.png"
-                />
-              </Box>
-              <Box>
-                <Image
-                  width={222}
-                  src={test3}
-                  preview={false}
-                  fallback="https://i.ibb.co/0FTQSN9/error-img.png"
-                />
-              </Box>
-            </Box>
-          </Box>
-          {/* The Text Side */}
-          <Box
-            sx={{
-              textAlign: "left",
-              marginLeft: "80px",
-            }}
-          >
+            {/* Image Area */}
+            <Image
+              preview={false}
+              src={illustration1}
+              fallback={errorIMG}
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Col>
+          <Col sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 12 }}>
+            {" "}
+            {/* Text Area */}
             <Typography
               style={{
                 color: "#fff",
-                fontSize: "15px",
-                fontWeight: 600,
-                fontFamily: "inter, sans-serif",
-              }}
-            >
-              WELCOME
-            </Typography>
-            <Typography
-              style={{
-                color: "#fff",
-                fontSize: "48px",
+                fontSize: isSmallDevice
+                  ? "36px"
+                  : isMediumDevice
+                  ? "40px"
+                  : "48px",
                 fontFamily: "'Syne', sans-serif",
+                textAlign: "left",
               }}
             >
-              Easy ways to use <br /> AI tools, and tools <br /> to build AI.
+              Navigating the Future of Web Development
             </Typography>
             <Typography
               style={{
                 color: "#fff",
-                fontSize: "16px",
+                fontSize: isSmallDevice
+                  ? "14px"
+                  : isMediumDevice
+                  ? "15px"
+                  : "16px",
                 fontFamily: "inter, sans-serif",
+                textAlign: "left",
               }}
             >
-              Dicta sunt explicabo. Nemo enim ipsam voluptatem quia <br />{" "}
-              voluptas sit aspernatur aut odit aut fugit, sed quia.
+              Discover seamless ways to design and develop with our expert web
+              and app solutions. Empower your online presence effortlessly.
             </Typography>
-          </Box>
-        </Box>
+            <Link to={"/aboutUs"} style={{ marginBottom: "50px" }}>
+              <Button
+                variant="contained"
+                color="ochre"
+                sx={{
+                  marginTop: "2rem",
+                  width: "150px",
+                  height: "50px",
+                  borderRadius: "50px",
+                  float: "left",
+                }}
+              >
+                About Us
+              </Button>
+            </Link>
+          </Col>
+        </Row>
       </Box>
     </ThemeProvider>
   );
