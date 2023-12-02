@@ -1,0 +1,93 @@
+.slider {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+  width: 100vw; /* Set slider container width to 100vw */
+  place-items: center;
+  overflow: hidden; /* Add overflow property to hide any overflow caused by scrolling */
+}
+
+.slide-track {
+  display: flex;
+  width: calc(650px * 18); /* (slide track width = total number of slides (9*2 =18) * individual slide width (250px)) */
+  animation: scroll 70s linear infinite; /* Adjusted animation duration (Speed) */
+}
+
+.slide-track:hover {
+  animation-play-state: paused; /* Pauses the animation on hover */
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-250px * 9)); /* (Moves the slide track leftwards (-250px) by half (18 images / 2 =9) of its width) */
+  }
+}
+
+.slide {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px; /* To make the image move on the Z-axis (depth), we need to add to its container (.slide) a perspective */
+  color: #fff;
+  border-radius: 20px;
+}
+
+.slide img {
+  width: 100%;
+  transition: transform 1s;
+  border-radius: 20px;
+}
+
+.slide img:hover {
+  transform: scale(1.05) ; /* Unlike translateX and translateY, translateZ alone won't work */
+}
+
+@media screen and (max-width: 1366px) {
+  .slider{
+    height: 160vh;
+  }
+
+  .slide-track {
+      width: calc(550px * 18);
+  }
+
+  .slide{
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slide-track {
+      width: calc(550px * 18);
+  }
+
+  .slide{
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .slide-track {
+      width: calc(380px * 18);
+  }
+
+  .slide{
+    width: 380px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slide-track {
+      width: calc(350px * 18);
+  }
+
+  .slide{
+    width: 350px;
+  }
+}
