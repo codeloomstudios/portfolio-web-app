@@ -18,6 +18,7 @@ import {
 import { InView } from "react-intersection-observer";
 import FAQSection from "./FAQSection";
 import NewsLetterSection from "./NewsLetterSection";
+import FooterSec from "../partials/Footer";
 
 const { Meta } = Card;
 
@@ -437,6 +438,7 @@ const HomePage = () => {
           </Box>
         )}
       </InView>
+      <FooterSec />
     </ThemeProvider>
   );
 };
