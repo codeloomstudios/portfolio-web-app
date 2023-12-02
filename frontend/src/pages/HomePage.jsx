@@ -17,6 +17,7 @@ import {
 } from "../images/LocalImageExport";
 import { InView } from "react-intersection-observer";
 import FAQSection from "./FAQSection";
+import NewsLetterSection from "./NewsLetterSection";
 
 const { Meta } = Card;
 
@@ -312,6 +313,8 @@ const HomePage = () => {
               gutter={[40, 40]}
             >
               <Col>
+                {" "}
+                {/* card 1 */}
                 <Card
                   style={{
                     width: 240,
@@ -331,6 +334,8 @@ const HomePage = () => {
                 </Card>
               </Col>
               <Col>
+                {" "}
+                {/* card 2 */}
                 <Card
                   style={{
                     width: 240,
@@ -347,6 +352,8 @@ const HomePage = () => {
                 </Card>
               </Col>
               <Col>
+                {" "}
+                {/* card 3 */}
                 <Card
                   style={{
                     width: 240,
@@ -366,6 +373,8 @@ const HomePage = () => {
                 </Card>
               </Col>
               <Col>
+                {" "}
+                {/* card 4 */}
                 <Card
                   style={{
                     width: 240,
@@ -405,6 +414,26 @@ const HomePage = () => {
             }}
           >
             <FAQSection />
+          </Box>
+        )}
+      </InView>
+
+      {/* Section 06 for NewsLetter section component */}
+      <InView triggerOnce={true}>
+        {({ inView, ref }) => (
+          <Box
+            ref={ref}
+            sx={{
+              marginTop: "100px",
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              alignItems: "center",
+              opacity: inView ? 1 : 0,
+              transition: "opacity 0.5s ease-in-out",
+            }}
+          >
+            <NewsLetterSection />
           </Box>
         )}
       </InView>
