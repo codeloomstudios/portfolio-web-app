@@ -29,8 +29,8 @@ const ImageScroll2 = () => {
             <Carousel
                 autoplay
                 dotPosition="bottom"
+                style={{ paddingBottom: '30px'  }}
             >
-                {/* Replace the following Image components with your actual images */}
                 <Box>
                     <Image src={illustration1} alt="Image 1" preview={false} fallback={errorIMG} />
                 </Box>

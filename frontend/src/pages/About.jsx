@@ -175,7 +175,7 @@ const About = () => {
                 transition: "opacity 0.5s ease-in-out",
               }}
             >
-              <Row gutter={[16, 16]} style={{ marginTop: "150px" }}>
+              <Row gutter={[16, 16]} style={{ marginTop: isSmallDevice ? "50px" : isMediumDevice ? "75px" : "100px" }}>
                 <Col
                   sm={24}
                   md={12}
@@ -284,7 +284,7 @@ const About = () => {
             <Box
               ref={ref}
               sx={{
-                marginTop: "150px",
+                marginTop: isSmallDevice ? "50px" : isMediumDevice ? "75px" : "100px",
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
@@ -357,7 +357,7 @@ const About = () => {
             <Box
               ref={ref}
               sx={{
-                marginTop: "50px",
+                marginTop: isSmallDevice ? "50px" : isMediumDevice ? "75px" : "100px",
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
@@ -376,7 +376,7 @@ const About = () => {
             <Box
               ref={ref}
               sx={{
-                marginTop: "150px",
+                marginTop: isSmallDevice ? "70px" : isMediumDevice ? "100px" : "130px",
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
@@ -431,7 +431,7 @@ const About = () => {
                   </Typography>
                 </Col>
                 <Col sm={24} md={24} lg={8} xl={8}>
-                  <Link to="/portfolio">
+                  <Link to="/ourProjects">
                     <Button
                       variant="contained"
                       color="ochre"
@@ -459,7 +459,7 @@ const About = () => {
             <Box
               ref={ref}
               sx={{
-                marginTop: "50px",
+                marginTop: isSmallDevice ? "50px" : isMediumDevice ? "75px" : "100px",
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
