@@ -4,7 +4,7 @@ import { Box, Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { InView } from "react-intersection-observer";
-import { Image, Col, Row, Card, Progress, Carousel } from "antd";
+import { Image, Col, Row, Progress, Carousel } from "antd";
 import { illustration1, errorIMG } from "../images/LocalImageExport";
 import CounterUp from "../components/CounterUp";
 import ImageScroll2 from "../components/ImageScroll2";

@@ -262,7 +262,7 @@ const HomePage = () => {
           <Box
             ref={ref}
             sx={{
-              marginTop: "50px",
+              marginTop: "100px",
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
@@ -296,7 +296,7 @@ const HomePage = () => {
                 style={{
                   color: "#fff",
                   fontFamily: "Syne, sans-serif",
-                  fontSize: "48px",
+                  fontSize: isSmallDevice ? "36px" : isMediumDevice ? "40px" : "48px"
                 }}
               >
                 Create your dream website with us

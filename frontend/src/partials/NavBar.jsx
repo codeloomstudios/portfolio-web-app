@@ -65,7 +65,8 @@ const NavBar = () => {
       direction="row"
       alignItems="center"
       p={2}
-      className="navbar" // Apply the navbar class
+      className="navbar" 
+      backgroundColor="transparent"
     >
       {/* Mobile Menu Icon */}
       {isMobileView && (
@@ -92,7 +93,7 @@ const NavBar = () => {
           <Paper
             key={link.id}
             className="Paper"
-            style={{ backgroundColor: "#111" }}
+            style={{ backgroundColor: "transparent" }}
           >
             <Link to={link.to}>{link.label}</Link>
           </Paper>
@@ -121,13 +122,15 @@ const NavBar = () => {
                 onClick={() => {
                   setMobileMenuOpen(false);
                 }}
+                style={{border:"none"}}
               >
                 <Paper
                   className="mobilePaper"
                   style={{
-                    backgroundColor: "#111",
+                    backgroundColor: "transparent",
                     color: location.pathname === link.to ? "#ccff02" : "#fff",
                     padding: "15px 0px 15px 0px",
+                    border:"none"
                   }}
                 >
                   {link.label}
