@@ -18,7 +18,6 @@ import {
 import { InView } from "react-intersection-observer";
 import FAQSection from "./FAQSection";
 import NewsLetterSection from "./NewsLetterSection";
-import FooterSec from "../partials/Footer";
 
 const { Meta } = Card;
 
@@ -36,7 +35,6 @@ const HomePage = () => {
 
   const isSmallDevice = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumDevice = useMediaQuery(theme.breakpoints.down("md"));
-  const isLargeDevice = useMediaQuery(theme.breakpoints.down("lg"));
 
   const words = [
     "React",
@@ -438,7 +436,6 @@ const HomePage = () => {
           </Box>
         )}
       </InView>
-      <FooterSec />
     </ThemeProvider>
   );
 };

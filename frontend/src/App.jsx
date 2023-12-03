@@ -5,6 +5,7 @@ import { Box } from "@mui/material";
 import HomePage from './pages/HomePage';
 import NavBar from './partials/NavBar';
 import About from './pages/About';
+import FooterSec from './partials/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" exact element={<HomePage />} />
             <Route path="/about" exact element={<About />} />
         </Routes>
+        <FooterSec />
       </Box>
     </BrowserRouter>
   );

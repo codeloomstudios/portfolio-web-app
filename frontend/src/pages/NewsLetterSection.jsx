@@ -50,7 +50,7 @@ const NewsLetterSection = () => {
               Subscribe For The Updates
             </Typography>
           </Col>
-          <Col xs={24} sm={24} md={12} lg={12}>
+          <Col xs={24} sm={24} md={12} lg={12} style={{display:"flex", justifyContent:"center",alignItems:"center",paddingTop:"20px"}}>
             <Form form={form} onFinish={handleSubmit} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               <Form.Item
                 name="email"
