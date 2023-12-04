@@ -103,7 +103,7 @@ const NewsLetterSection = () => {
               onFinish={handleSubmit}
               style={{
                 display: "flex",
-                flexDirection: isSmallDevice ? "column" : "row",
+                flexDirection: isSmallDevice ? "column" : isMediumDevice ? "row" : "row",
                 justifyContent: "center",
                 alignItems: "center",
               }}

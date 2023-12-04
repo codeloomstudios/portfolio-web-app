@@ -50,7 +50,6 @@ const About = () => {
               <Typography
                 sx={{
                   color: "#ccff02",
-                  fontWeight: "bold",
                   textAlign: "center",
                   fontSize: isSmallDevice
                     ? "30px"
@@ -58,6 +57,7 @@ const About = () => {
                     ? "40px"
                     : "50px",
                   marginBottom: "1rem",
+                  fontFamily: "Syne Mono, monospace",
                   lineHeight: "1",
                 }}
               >

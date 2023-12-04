@@ -109,6 +109,7 @@ const Team = () => {
                 color: theme.palette.ochre.main,
                 textAlign: "center",
                 fontSize: isSmallDevice ? "38px" : isMediumDevice ? "40px" : "48px",
+                fontFamily: "Syne Mono, monospace",
               }}
             >
               Meet the Team

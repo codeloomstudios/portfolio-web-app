@@ -60,6 +60,7 @@ const Services = () => {
                     ? "40px"
                     : "48px",
                   color: "#ccff02",
+                  fontFamily: "Syne Mono, monospace",
                 }}
               >
                 What We Offer
