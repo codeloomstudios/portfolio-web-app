@@ -22,6 +22,7 @@ app.use("/users", require("./routes/UsersRoutes"));
 //add routes here...
 app.use("/newsletterEmails", require("./routes/NewsLetterEmailsRoutes"));
 app.use("/contact", require("./routes/ContactRoutes"));
+app.use("/request", require("./routes/RequestRoutes"));
 
 
 
