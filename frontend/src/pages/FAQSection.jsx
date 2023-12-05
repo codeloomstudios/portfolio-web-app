@@ -2,6 +2,8 @@ import React from "react";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import { Typography, Box, Divider } from "@mui/material";
@@ -50,6 +52,20 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 const FAQSection = () => {
+  const theme = createTheme({
+    palette: {
+      ochre: {
+        main: "#ccff02",
+        light: "#e6ff4e",
+        dark: "#99cc01",
+        contrastText: "#242105",
+      },
+    },
+  });
+  
+  const isSmallDevice = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMediumDevice = useMediaQuery(theme.breakpoints.down("md"));
+  
   const [expanded, setExpanded] = React.useState(null);
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -64,7 +80,7 @@ const FAQSection = () => {
             textAlign: "center",
             color: "#fff",
             fontFamily: "Syne, sans-serif",
-            fontSize: "48px",
+            fontSize: isSmallDevice ? "36px" : isMediumDevice ? "40px" : "48px",
             marginBottom: "20px",
           }}
         >

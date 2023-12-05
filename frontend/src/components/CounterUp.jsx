@@ -10,7 +10,6 @@ const CounterUp = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: "100px",
       }}
     >
       <Row
