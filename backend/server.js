@@ -23,6 +23,7 @@ app.use("/users", require("./routes/UsersRoutes"));
 app.use("/newsletterEmails", require("./routes/NewsLetterEmailsRoutes"));
 app.use("/contact", require("./routes/ContactRoutes"));
 app.use("/request", require("./routes/RequestRoutes"));
+app.use("/projectSample", require("./routes/ProjectSampleRoutes"));
 
 
 
