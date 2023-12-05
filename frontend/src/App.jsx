@@ -9,7 +9,7 @@ import FooterSec from './partials/Footer';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import OurProjects from './pages/OurProjects';
-import Pricing from './pages/Pricing';
+import Request from './pages/Request';
 import Team from './pages/Team';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
             <Route path="/about" exact element={<About />} />
             <Route path="/services" exact element={<Services />} />
             <Route path="/ourProjects" exact element={<OurProjects />} />
-            <Route path="/pricing" exact element={<Pricing />} />
+            <Route path="/request" exact element={<Request />} />
             <Route path="/team" exact element={<Team />} />
             <Route path="/contactUs" exact element={<Contact />} />
         </Routes>

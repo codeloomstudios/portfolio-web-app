@@ -15,7 +15,7 @@ const NavBar = () => {
     { label: "About", to: "/about", id: "about" },
     { label: "Services", to: "/services", id: "services" },
     { label: "Our Projects", to: "/ourProjects", id: "ourProjects" },
-    // { label: "Pricing", to: "/pricing", id: "pricing" }, // Uncomment this line to add a Pricing link
+    { label: "Request", to: "/request", id: "request" },
     { label: "Team", to: "/team", id: "team" },
     { label: "Contact", to: "/contactUs", id: "contactUs" },
   ];

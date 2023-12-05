@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Box, Typography, Button } from "@mui/material";
-import { Link } from "react-router-dom";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { UserOutlined, MailOutlined } from "@ant-design/icons";
-import ImageScroll1 from "../components/ImageScroll1";
-import WordsGallery from "../components/WordsGallery";
-import CounterUp from "../components/CounterUp";
 import { Image, Col, Row, Form, Card, Input, message } from "antd";
 import {
   illustration1,
-  illustration2,
-  illustration3,
-  illustration4,
-  illustration5,
   errorIMG,
 } from "../images/LocalImageExport";
 import { InView } from "react-intersection-observer";
@@ -143,7 +135,7 @@ const Contact = () => {
             <Row
               style={{
                 width: "70vw",
-                backgroundColor: "#343541",
+                backgroundColor: "#1e1e1e",
                 padding: "20px",
                 borderRadius: "20px",
                 display: "flex",
