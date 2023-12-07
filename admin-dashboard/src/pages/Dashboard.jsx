@@ -5,6 +5,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./Home";
 import AddProject from "./AddProject";
 import Projects from "./Projects";
+import Users from "./Users";
 
 const { Content } = Layout;
 
@@ -45,6 +46,7 @@ const Dashboard = () => {
             <Route path="/" element={<Home />} /> 
             <Route path="/addProject" element={<AddProject />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/users" element={<Users />} />
           </Routes>
         </Content>
       </Layout>

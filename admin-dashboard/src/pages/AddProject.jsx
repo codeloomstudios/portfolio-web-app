@@ -146,7 +146,6 @@ const AddProject = () => {
                           {subFields.map(
                             ({ key: subKey, name: subName, fieldKey: subFieldKey, ...subRestField }) => (
                               <div key={subKey}>
-                                <Title level={5}>Image {subKey + 1}</Title>
                                 <Form.Item
                                   {...subRestField}
                                   name={[subName, subKey]}
@@ -166,16 +165,47 @@ const AddProject = () => {
                                     style={{ maxWidth: "100%", maxHeight: "150px", marginTop: "10px" }}
                                   />
                                 )}
+                                <div
+                                  key={subKey}
+                                  style={{
+                                    display: "flex",
+                                    justifyContent: "right",
+                                  }}
+                                >
+                                  <Button
+                                    danger
+                                    ghost
+                                    style={{
+                                      marginBottom: "20px",
+                                      marginTop: "-10px",
+                                      display:"none" // Hide the button
+                                    }}
+                                    onClick={() => subRemove(subKey)}
+                                  >
+                                    Remove Image
+                                  </Button>
+                                </div>
                               </div>
                             )
                           )}
+                          <Button
+                            type="primary"
+                            style={{
+                              backgroundColor: "#cceb5c",
+                              color: "#000",
+                              display:"none" // Hide the button
+                            }}
+                            onClick={() => subAdd("")}
+                          >
+                            Add Image
+                          </Button>
                         </>
                       )}
                     </Form.List>
                     <Button
                       type="primary"
                       danger
-                      style={{ marginLeft: "5px", marginTop:"10px" }}
+                      style={{ marginLeft: "5px" }}
                       onClick={() => remove(name)}
                     >
                       Remove Sample

@@ -36,7 +36,6 @@ const EditProject = ({ visible, onCancel, project, onUpdate }) => {
           message.success("Project updated successfully");
           onUpdate(values);
           onCancel();
-          window.location.reload();
         } catch (error) {
           console.error("Error updating project:", error);
           message.error("Error updating project");
@@ -187,15 +186,46 @@ const EditProject = ({ visible, onCancel, project, onUpdate }) => {
                                 style={{ maxWidth: "100%", maxHeight: "150px", marginTop: "10px" }}
                               />
                             )}
+                            <div
+                              key={imageKey}
+                              style={{
+                                display: "flex",
+                                justifyContent: "right",
+                              }}
+                            >
+                              <Button
+                                danger
+                                ghost
+                                style={{
+                                  marginBottom: "20px",
+                                  marginTop: "-10px",
+                                  display: "none",
+                                }}
+                                onClick={() => subRemove(imageKey)}
+                              >
+                                Remove Image
+                              </Button>
+                            </div>
                           </div>
                         ))}
+                        <Button
+                          type="primary"
+                          style={{
+                            backgroundColor: "#cceb5c",
+                            color: "#000",
+                            display: "none",
+                          }}
+                          onClick={() => subAdd("")}
+                        >
+                          Add Image
+                        </Button>
                       </>
                     )}
                   </Form.List>
                   <Button
                     type="primary"
                     danger
-                    style={{ marginLeft: "5px", marginTop:"10px" }}
+                    style={{ marginTop:"10px" }}
                     onClick={() => remove(sampleKey)}
                   >
                     Remove Sample

@@ -29,7 +29,7 @@ const SideMenu = () => {
         navigate('/SiteSettings');
         break;
       case '6':
-        navigate('/option6Page');
+        navigate('/users');
         break;
       // Add more cases as needed
       default:
@@ -66,7 +66,7 @@ const SideMenu = () => {
         {/* Navigation Two with sub-items */}
         <Menu.SubMenu key="sub2" icon={<AppstoreOutlined />} title="Settings">
           <Menu.Item key="5">Site Settings</Menu.Item>
-          <Menu.Item key="6">Option 6</Menu.Item>
+          <Menu.Item key="6">Users</Menu.Item>
         </Menu.SubMenu>
       </Menu>
     </Sider>

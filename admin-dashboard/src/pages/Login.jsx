@@ -29,7 +29,7 @@ const Login = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       const response = await axios.post(
-        "http://localhost:8070/users/login",
+        "http://localhost:5000/users/login",
         values
       );
       console.log("Login successful", response.data);
@@ -44,7 +44,7 @@ const Login = () => {
     }
   };
 
-  window.localStorage.setItem("LoggedIn", true); // remove this line after creating a login backend
+  //window.localStorage.setItem("LoggedIn", true); // remove this line after creating a login backend
 
   return (
     <Container
