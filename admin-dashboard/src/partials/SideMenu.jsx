@@ -23,7 +23,7 @@ const SideMenu = () => {
         navigate('/addProject');
         break;
       case '2':
-        navigate('/option2Page');
+        navigate('/Projects');
         break;
       case '5':
         navigate('/SiteSettings');
@@ -60,7 +60,7 @@ const SideMenu = () => {
         {/* Navigation One with sub-items */}
         <Menu.SubMenu key="sub1" icon={<MailOutlined />} title="Manage">
           <Menu.Item key="1">Add Project</Menu.Item>
-          <Menu.Item key="2">Option 2</Menu.Item>
+          <Menu.Item key="2">Projects</Menu.Item>
         </Menu.SubMenu>
 
         {/* Navigation Two with sub-items */}

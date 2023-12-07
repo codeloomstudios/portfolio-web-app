@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { Box } from "@mui/material";
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import './App.css';
