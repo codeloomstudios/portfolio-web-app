@@ -3,14 +3,15 @@ const ProjectSample = require("../models/ProjectSample.model");
 //Add a new project sample to the database
 const addProjectSample = async (req, res) => {
   try {
-    const { projectName, projectType, projectDiscription, thumbnail, samples } = req.body;
+    const { projectName, projectType, projectDescription, thumbnail, samples, status } = req.body;
 
     const newProjectSample = new ProjectSample({
       projectName,
       projectType,
-      projectDiscription,
+      projectDescription,
       thumbnail,
-      samples
+      samples,
+      status
     });
 
     await newProjectSample.save();
@@ -42,15 +43,16 @@ const getProjectSample = async (req, res) => {
       return res.status(404).json({ error: "Project Sample not found" });
     }
 
-    const { _id, projectName, projectType, projectDiscription,  thumbnail, samples } = projectSampleObject;
+    const { _id, projectName, projectType, projectDescription,  thumbnail, samples, status } = projectSampleObject;
 
     res.status(200).json({
       _id,
       projectName,
       projectType,
-      projectDiscription,
+      projectDescription,
       thumbnail,
-      samples
+      samples,
+      status
     });
   } catch (error) {
     res.status(500).json({ error: "Internal server error" });
@@ -60,7 +62,7 @@ const getProjectSample = async (req, res) => {
 //Update Project Sample
 const updateProjectSample = async (req, res) => {
   try {
-    const { projectName, projectType, projectDiscription, thumbnail, samples } = req.body;
+    const { projectName, projectType, projectDescription, thumbnail, samples, status } = req.body;
 
     const projectSampleObject = await ProjectSample.findById(req.params.id);
 
@@ -71,9 +73,10 @@ const updateProjectSample = async (req, res) => {
     await ProjectSample.findByIdAndUpdate(req.params.id, {
       projectName,
       projectType,
-      projectDiscription,
+      projectDescription,
       thumbnail,
-      samples
+      samples,
+      status
     });
 
     res.status(200).json({ message: "Project Sample updated successfully" });

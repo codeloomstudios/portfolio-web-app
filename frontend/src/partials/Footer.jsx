@@ -50,8 +50,8 @@ const FooterSec = () => {
             Our Projects
           </Link>
           <br />
-          <Link href="/pricing" style={{ color: "#fff" }}>
-            Pricing
+          <Link href="/request" style={{ color: "#fff" }}>
+            Request
           </Link>
           <br />
           <Link href="/team" style={{ color: "#fff" }}>

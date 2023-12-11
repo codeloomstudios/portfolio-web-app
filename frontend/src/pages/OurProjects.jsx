@@ -34,7 +34,8 @@ const OurProjects = () => {
     axios
       .get(apiUrl)
       .then((response) => {
-        setProjects(response.data || []); // Ensure response.data is an array or default to an empty array
+        const filteredProjects = response.data.filter((project) => project.status === "active");
+        setProjects(filteredProjects || []); // Ensure filteredProjects is an array or default to an empty array
       })
       .catch((error) => {
         console.error("Error fetching projects:", error);

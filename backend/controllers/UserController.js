@@ -107,14 +107,13 @@ const getNewToken = async (req, res) => {
 
 //Get the user
 const getUser = async (req, res) => {
-  const { _id, username, mobile, email, role, password, status } =
-    await Users.findById(req.user.id);
+  const { _id, username, email } =
+    await Users.findById(req.params.id);
 
   res.status(200).json({
     id: _id,
     username,
-    email,
-    password,
+    email
   });
 };
 
